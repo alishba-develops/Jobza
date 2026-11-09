@@ -1,0 +1,24 @@
+
+
+#recappliedjobs-container{
+margin-top: 40px;
+padding: 0px;
+}
+
+#view-application-btn{
+   background: #7b5cf0;
+  color: white;
+  box-shadow: 0 8px 18px -8px rgba(85, 56, 196, 0.6);
+  padding: 10px 10px 10px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+#view-application-btn:hover{
+   background: #6349c1;
+  color: white;
+  box-shadow: 0 8px 18px -8px rgba(85, 56, 196, 0.6);
+  padding: 10px 10px 10px 10px;
+  border-radius: 8px;
+  border: none;
+}

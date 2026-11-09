@@ -1,0 +1,477 @@
+/* Jobseekersignin */
+
+#jobseekersignin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#jobseeker-signin-form {
+  background-color: white;
+  padding: 50px 30px 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 28px rgba(45, 35, 80, 0.08);
+}
+
+#jobseekersignin-para {
+  color: #858297;
+}
+
+#jobseekersignin-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#jobseekersignin-logo {
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+#jobseekersignin-logo span {
+  color: #7b5cf0;
+}
+
+#jobseekersignin-create-h {
+  margin-top: 0px;
+  padding: 0px;
+}
+
+#jobseekersignin-btn-login {
+  color: white;
+  background: #7b5cf0;
+}
+
+#jobseekersignin-btn-login:hover {
+  color: white;
+  background: #6149bb;
+}
+
+#jobseekersignin-div {
+  text-align: center;
+}
+
+#job-connect-login {
+  margin-top: 10px;
+}
+
+/* Jobseekersignup */
+
+#jobseekersignup-logo span {
+  color: #7b5cf0;
+}
+
+#jobseeker-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#jobseeker-signup-form {
+  background-color: white;
+  padding: 30px 30px 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 28px rgba(45, 35, 80, 0.08);
+}
+
+#jobseekersignup-logo {
+  font-size: 30px;
+}
+
+#jobseekersignup-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#jobsignup-para {
+  color: #858297;
+}
+
+#jobseekersignup-label {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#jobseeker-createacc-btn {
+  background-color: #7b5cf0;
+  color: white;
+}
+
+#jobseeker-createacc-btn:hover {
+  background-color: #6f54d0;
+  color: white;
+}
+
+#job-connect-login {
+  font-size: 14px;
+}
+
+/* Employersignin */
+
+#emp-signin-form1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#emp-signin-form {
+  background-color: white;
+  padding: 50px 30px 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 28px rgba(45, 35, 80, 0.08);
+}
+
+#employersignin-logo {
+  margin-bottom: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+#employersignin-logo span {
+  color: #7b5cf0;
+}
+
+#employer-signin-create-h {
+  font-weight: 400;
+  margin: 0;
+  padding: 0px;
+}
+
+#emp-signin-top {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#emp-for-employers {
+  color: rgb(140, 139, 139);
+}
+
+#emp-login-email-group {
+  margin-top: 20px;
+}
+
+#employeesignin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#emp-login-btn {
+  color: white;
+  background: #7b5cf0;
+  padding: 5px 20px 5px 20px;
+}
+
+#emp-login-btn:hover {
+  color: white;
+  background: #6149bb;
+}
+
+/* Employer signup */
+
+#emp-signup-form1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#emp-signup-form {
+  background-color: white;
+  padding: 30px 30px 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 28px rgba(45, 35, 80, 0.08);
+}
+
+#emp-signup-top {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#employersignup-label {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#empsignup-for-employers {
+  color: rgb(140, 139, 139);
+}
+
+#emp-signup-create-h {
+  font-weight: 400;
+}
+
+#emp-signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#empsignup-button {
+  color: white;
+  background: #7b5cf0;
+  padding: 8px 20px 8px 20px;
+  border-radius: 10px;
+}
+
+#empsignup-button:hover {
+  color: white;
+  background: #6149bb;
+}
+
+/* Employer email verify */
+
+#emp-emailverify-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#emp-emailverify-inner {
+  background-color: white;
+  padding: 30px 30px 50px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 28px rgba(45, 35, 80, 0.08);
+}
+
+#emp-emailverify-head {
+  font-weight: 400;
+}
+
+#emp-emailverify-para {
+  color: rgb(175, 174, 174);
+}
+
+#emp-emailver-input {
+  padding: 5px 0px 5px 10px;
+  border: 1px solid rgb(183, 181, 181);
+}
+
+#emp-emailver-input:focus {
+  outline: none;
+}
+
+#emp-emailver-button {
+  color: white;
+  background: #7b5cf0;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #7b5cf0;
+  border-left: none;
+}
+
+#emp-emailver-button:hover {
+  color: white;
+  background: #6149bb;
+}
+
+/* Company Modal */
+
+#company-modal-outer {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2fc;
+  box-sizing: border-box;
+}
+
+#company-form {
+  width: 100%;
+  max-width: 620px;
+  margin: 0;
+  padding: 25px 32px 25px 32px;
+  background-color: white;
+  border: 1px solid #e7e1f5;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(45, 35, 80, 0.1);
+  box-sizing: border-box;
+}
+
+#companymodal-h {
+  color: #1f1b33;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#companyprof-1,
+#companyprof-2 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#companyprof-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+#companyprof-1-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 0;
+}
+
+#company-first-group2 {
+  width: 100%;
+}
+
+#company-first-group3 {
+  width: 100%;
+}
+
+#company-form label,
+#employersignup-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #39334f;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#name {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #e2ddef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f1b33;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#name:focus {
+  border-color: #6d4fe0;
+  box-shadow: 0 0 0 3px rgba(109, 79, 224, 0.1);
+}
+
+#company-form input::placeholder {
+  color: #a19bb3;
+}
+
+#company-form textarea::placeholder {
+  color: #a19bb3;
+}
+
+#logo-form-group {
+  width: 100%;
+}
+
+#com-next-btn {
+  background-color: #6d4fe0;
+  color: white;
+}
+
+#com-next-btn:hover {
+  background-color: #5841b5;
+  color: white;
+}
+
+#company-1 {
+  margin-top: 40px;
+}
+
+#comp-prof-img {
+  display: block;
+  width: 65px;
+  height: 65px;
+
+  padding: 4px;
+  object-fit: contain;
+}
+
+#add-comp-logo {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  color: #6e6a85;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+#comp-textarea {
+  display: block;
+  width: 100%;
+  height: 90px;
+  min-height: 85px;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+  border: 1px solid #e2ddef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f1b33;
+  font-size: 13px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  resize: vertical;
+  outline: none;
+}
+
+#comp-textarea:focus {
+  border-color: #6d4fe0;
+  box-shadow: 0 0 0 3px rgba(109, 79, 224, 0.1);
+}
+
+#company-country-group,
+#company-address-group {
+  width: 100%;
+  margin: 0;
+}
+
+#company-country,
+#company-address {
+  width: 100%;
+}
+
+#companyprof-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#companyprof2-label {
+  display: block;
+  color: #39334f;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#compprof2-groups {
+  width: 100%;
+  margin: 0;
+}
+
+#companyprof-1-btn-div {
+  margin-top: 10px;
+}
+
+#com-save-btn {
+  border: none;
+  background-color: #6d4fe0;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 8px;
+}

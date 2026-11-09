@@ -1,0 +1,412 @@
+#recruiter-dashboard {
+  width: 98%;
+  margin-top: 50px;
+  color: #1f1b33;
+}
+
+#dashboard-top-section {
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#dashboard-left,
+#dashboard-right {
+  width: 50%;
+}
+
+#dashboard-stats {
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #e7e1f5;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0 8px 25px -15px rgba(109, 79, 224, 0.2);
+}
+
+#applications-stat-card,
+#jobs-stat-card {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  background-color: rgb(248, 249, 250);
+  border-right: 1px solid rgb(201, 200, 200);
+  border-radius: 0px;
+}
+
+#hired-stat-card {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  background-color: rgb(248, 249, 250);
+}
+
+#applications-stat-title,
+#jobs-stat-title,
+#hired-stat-title {
+  margin: 0 0 12px;
+  color: #6e6a85;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#applications-stat-number,
+#jobs-stat-number,
+#hired-stat-number {
+  margin: 0;
+  color: #6d4fe0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#management-application-card {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e7e1f5;
+  border-radius: 12px;
+  background: #faf9fd;
+}
+
+#management-application-info {
+  padding: 14px;
+  border: 1px solid #e7e1f5;
+  border-radius: 12px;
+  background: #faf9fd;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#quick-actions {
+  width: 100%;
+  height: 240px;
+  padding: 20px;
+  box-shadow: 0 8px 25px -15px rgba(109, 79, 224, 0.2);
+  border: 1px solid #e7e1f5;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#quick-actions-title {
+  margin: 0 0 15px;
+  color: #1f1b33;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#quick-actions-list {
+  gap: 10px;
+}
+
+#quick-actions-list a {
+  width: 100%;
+}
+
+#post-job-action-btn,
+#account-settings-action-btn,
+#company-settings-action-btn {
+  width: 100%;
+  border: 1px solid #e7e1f5;
+  background: white;
+  color: #6d4fe0;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: left;
+}
+
+#post-job-action-btn:hover,
+#account-settings-action-btn:hover,
+#company-settings-action-btn:hover {
+  background: #6d4fe0;
+  color: white;
+  border-color: #b9a9e5;
+}
+
+#dashboard-applications {
+  padding: 22px;
+  box-shadow: 0 8px 25px -15px rgba(109, 79, 224, 0.2);
+  border: 1px solid #e7e1f5;
+  border-radius: 10px;
+  min-width: 0;
+}
+
+#applications-heading-row {
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+#dashboard-applications-title {
+  margin: 0;
+  color: #1f1b33;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+#view-all-applications-btn {
+  border: 1px solid #d8cff5;
+  color: #6d4fe0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #ffffff;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+#view-all-applications-btn:hover {
+  background: #6d4fe0;
+  color: #ffffff;
+  border-color: #6d4fe0;
+}
+
+#dashboard-applications-list {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+#recapp-thead th {
+  background: #f0ebff;
+  color: #5538c4;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 12px;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid #e4dcf7;
+}
+
+#dashboard-application-card {
+  border-bottom: 1px solid #eeeaf7;
+  transition: background 0.2s ease;
+}
+
+#dashboard-application-card:hover {
+  background: #faf9ff;
+}
+
+#dashboard-application-card:last-child {
+  border-bottom: none;
+}
+
+#dashboard-application-card td {
+  padding: 17px 12px;
+  font-size: 15px;
+}
+
+#dashboard-applicant-name {
+  color: #1f1b33;
+  font-weight: 400;
+  min-width: 120px;
+}
+
+#dashboard-application-job {
+  color: #6e6a85;
+  min-width: 120px;
+}
+
+#dashboard-application-status {
+  display: inline-block;
+  color: #6d4fe0;
+  background: #f3effb;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#dashapplication-outer {
+  margin-left: 18px;
+}
+
+#dashboard-application-date {
+  color: #6e6a85;
+  white-space: nowrap;
+}
+
+/* CANDIDATE MANAGEMENT */
+
+#dash-candidate-management {
+  width: 100%;
+  height: 420px;
+  padding: 20px;
+  border: 1px solid #e7e1f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px -15px rgba(109, 79, 224, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#candidate-management-title {
+  margin: 0 0 16px;
+  color: #1f1b33;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+#candidate-management-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+#management-application-info {
+  width: 100%;
+  min-height: 85px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #faf9fd;
+  border: 1px solid #e7e1f5;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+#management-candidate-details {
+  min-width: 0;
+  flex: 1;
+}
+
+#management-applicant-name {
+  margin: 0 0 5px;
+  color: #1f1b33;
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+#management-application-job {
+  margin: 0 0 4px;
+  color: #6e6a85;
+  font-size: 13px;
+}
+
+#management-application-city {
+  margin: 0;
+  color: #8b879c;
+  font-size: 12px;
+}
+
+#management-profile-action {
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+#management-profile-btn {
+  padding: 8px 10px;
+  border: 1px solid #e5ddf2;
+  border-radius: 8px;
+  background: #f3effb;
+  color: #6d4fe0;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#management-profile-btn:hover {
+  background: #6d4fe0;
+  color: #ffffff;
+}
+
+/* JOB section */
+
+#interview-section {
+  width: 100%;
+  height: 330px;
+  padding: 20px;
+  border: 1px solid #e7e1f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px -15px rgba(109, 79, 224, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#interview-title {
+  margin: 0 0 16px;
+  color: #1f1b33;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+#job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+#management-profile-img {
+  border-radius: 50px;
+}
+
+#management-application-info:hover,
+#dash-job-card:hover {
+  background: #ffffff;
+  border-color: #b9a9e5;
+}
+
+#dash-job-card {
+  width: 100%;
+  min-height: 65px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  background: #faf9fd;
+  border: 1px solid #e7e1f5;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+#dash-job-title {
+  flex: 1.5;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+#dash-job-status {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#dash-job-location {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+#management-profile-action {
+  flex-shrink: 0;
+}

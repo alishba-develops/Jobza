@@ -7,7 +7,7 @@ function Application() {
       const [data, setdata] = useState("");
        console.log("id:",appdata._id)
         const fetchapi = () => {
-          fetch("http://localhost:5000/showrecruiterapplication/", { credentials: "include" })
+          fetch(`${process.env.REACT_APP_API_URL}/showrecruiterapplication/`, { credentials: "include" })
             .then((res) => res.json())
             .then((user) => {
                console.log("applications:", appdata);

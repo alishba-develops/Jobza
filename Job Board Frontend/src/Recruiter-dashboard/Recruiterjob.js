@@ -45,7 +45,7 @@ function Recruiterjob(props) {
 
   const closejob = async (jobid) => {
     try {
-      const response = await fetch(`http://localhost:5000/closejob/${jobid}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/closejob/${jobid}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(),
@@ -68,7 +68,7 @@ function Recruiterjob(props) {
 
   const deletejob = async (jobid) => {
     try {
-      const response = await fetch(`http://localhost:5000/deletejob/${jobid}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/deletejob/${jobid}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
 
@@ -102,7 +102,7 @@ function Recruiterjob(props) {
   const browsejobs = async () => {
     setfilterjobs(true);
     try {
-      const response = await fetch("http://localhost:5000/searchemployerjob", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/searchemployerjob`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

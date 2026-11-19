@@ -26,7 +26,7 @@ function Employeremailverify() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/employerverify", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/employerverify`, {
         method: "POST",
 
         headers: {

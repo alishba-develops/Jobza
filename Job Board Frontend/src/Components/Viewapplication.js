@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 function Viewapplication(props) {
   const [appbyid, setappbyid] = useState({});
   const fetchapi = () => {
-    fetch(`http://localhost:5000/showrecruiterapplicationbyid/${props.data}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/showrecruiterapplicationbyid/${props.data}`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -26,7 +26,7 @@ function Viewapplication(props) {
   };
 
   const fetchstatus = () => {
-    fetch(`http://localhost:5000/status/${props.data}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/status/${props.data}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

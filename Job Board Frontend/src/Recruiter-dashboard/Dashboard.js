@@ -5,7 +5,7 @@ function Dashboard() {
   // Name
   const [user, setuser] = useState("");
   const fetchuser = () => {
-    fetch("http://localhost:5000/getuser", {
+    fetch(`${process.env.REACT_APP_API_URL}/getuser`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -22,7 +22,7 @@ function Dashboard() {
   const [appnum, setappnum] = useState("");
   const [hirednum, sethirednum] = useState("");
   const getappnum = async (req, res) => {
-    fetch("http://localhost:5000/appnum", { credentials: "include" })
+    fetch(`${process.env.REACT_APP_API_URL}/appnum`, { credentials: "include" })
       .then((res) => res.json())
       .then((user) => {
         setappnum(user.num);
@@ -37,7 +37,7 @@ function Dashboard() {
   // Get Jobnum
   const [jobnum, setjobnum] = useState("");
   const getjobnum = async (req, res) => {
-    fetch("http://localhost:5000/getjobnum", { credentials: "include" })
+    fetch(`${process.env.REACT_APP_API_URL}/getjobnum`, { credentials: "include" })
       .then((res) => res.json())
       .then((user) => {
         setjobnum(user);
@@ -54,7 +54,7 @@ function Dashboard() {
   const [data, setdata] = useState("");
   console.log("id:", appdata._id);
   const fetchapi = () => {
-    fetch("http://localhost:5000/showrecruiterapplication/", {
+    fetch(`${process.env.REACT_APP_API_URL}/showrecruiterapplication/`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -72,7 +72,7 @@ function Dashboard() {
   const [empjobs, setempjobs] = useState([]);
   const getjobs = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getemployerjobdata", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/getemployerjobdata`, {
         credentials: "include",
       });
       const jobs = await response.json();

@@ -6,7 +6,7 @@ function Jobseekercompany() {
 
   const [company, setcompany] = useState([]);
   const fetchapi = () => {
-    fetch("http://localhost:5000/getallcompany/")
+    fetch(`${process.env.REACT_APP_API_URL}/getallcompany/`)
       .then((res) => res.json())
       .then((company) => {
         setcompany(company);

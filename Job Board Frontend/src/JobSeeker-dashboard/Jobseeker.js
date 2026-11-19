@@ -12,7 +12,7 @@ function Jobseeker() {
  
     const [user, setuser] = useState("");
      const fetchuser = () => {
-       fetch("http://localhost:5000/getuser", {
+       fetch(`${process.env.REACT_APP_API_URL}/getuser`, {
         credentials:"include"
        })
          .then((res) => res.json())

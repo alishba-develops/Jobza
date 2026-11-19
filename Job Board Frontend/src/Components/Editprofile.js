@@ -107,7 +107,7 @@ function Editprofile() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/deleteexp/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/deleteexp/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -137,7 +137,7 @@ function Editprofile() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/deleteeducation/${id}`,
+        `${process.env.REACT_APP_API_URL}/deleteeducation/${id}`,
         {
           method: "DELETE",
           credentials: "include",
@@ -169,7 +169,7 @@ function Editprofile() {
     }));
 
     try {
-      const response = await fetch(`http://localhost:5000/deleteskill/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/deleteskill/${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -213,7 +213,7 @@ function Editprofile() {
 
   const fetchuser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getuser", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/getuser`, {
         credentials: "include",
       });
 
@@ -261,7 +261,7 @@ function Editprofile() {
         ...handleinput,
         profileimg,
       };
-      const response = await fetch("http://localhost:5000/saveprofile", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/saveprofile`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

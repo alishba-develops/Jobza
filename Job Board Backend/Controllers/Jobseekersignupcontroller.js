@@ -31,25 +31,63 @@ const sendingotp = async (req, res) => {
       isverified: false,
       role: "Jobseeker",
     });
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
 
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
-      },
-    });
+    //   auth: {
+    //     user: process.env.EMAIL_USER,
+    //     pass: process.env.EMAIL_PASSWORD,
+    //   },
+      
+    // });
 
     // Send OTP email
-    const info = await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      to: email,
-      subject: "Jobza Email Verification",
-      text: `Your Jobza verification code is ${otp}`,
-    });
+//     const info = await transporter.sendMail({
+//       from: process.env.EMAIL_USER,
+//       to: email,
+//       subject: "Jobza Email Verification",
+//       text: `Your Jobza verification code is ${otp}`,
+//     });
 
-    console.log("Email sent:", info.messageId);
+//     console.log("Email sent:", info.messageId);
 
+//     res.status(200).json({
+//       message: "OTP sent to your email",
+//     });
+//   } catch (error) {
+//     console.error("Signup Error:", error);
+
+//     res.status(500).json({
+//       message: "JobseekerSignup failed",
+//       error: error.message,
+//     });
+//   }
+// };
+console.log("Brevo API Key Loaded:", !!process.env.BREVO_API_KEY);
+const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+  method: "POST",
+  headers:{
+    "api-key":process.env.BREVO_API_KEY,
+    "Content-Type":"application/json"
+  },
+  body:JSON.stringify({
+    sender:{
+      name: "Jobza",
+      email:  process.env.BREVO_SENDER_EMAIL
+    },
+    to:[{email}],
+    subject: "Jobza Email Verification",
+    textContent: `Your Jobza verification code is ${otp}`,
+  })
+})
+// error with brevo
+const result = await response.text();
+
+console.log("Brevo Response:", response.status, result);
+
+if (!response.ok) {
+  throw new Error(result);
+}
     res.status(200).json({
       message: "OTP sent to your email",
     });
@@ -63,7 +101,7 @@ const sendingotp = async (req, res) => {
   }
 };
 
-// verify otp
+// // verify otp
 
 const verification = async (req, res) => {
   try {

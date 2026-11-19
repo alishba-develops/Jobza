@@ -10,7 +10,7 @@ function Recruitercandidate() {
   const [appdata, setappdata] = useState([]);
   const [data, setdata] = useState("");
   const fetchapi = () => {
-    fetch("http://localhost:5000/showrecruiterapplication/", {
+    fetch(`${process.env.REACT_APP_API_URL}/showrecruiterapplication/`, {
       credentials: "include",
     })
       .then((res) => res.json())

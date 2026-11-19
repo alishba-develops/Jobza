@@ -7,7 +7,7 @@ function Setting() {
   //   Get user
   const [handleinput, sethandleinput] = useState(false);
   const fetchuser = () => {
-    fetch("http://localhost:5000/getuser", {
+    fetch(`${process.env.REACT_APP_API_URL}/getuser`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -40,7 +40,7 @@ function Setting() {
 
   const changepassword = async () => {
     try {
-      const res = await fetch("http://localhost:5000/changepassword", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/changepassword`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

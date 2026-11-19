@@ -3,7 +3,7 @@ import "./Jobseeker.css";
 function Jobseekerapplication() {
   const [appdata, setappdata] = useState([]);
   const fetchapi = () => {
-    fetch("http://localhost:5000/showapplication/", { credentials: "include" })
+    fetch(`${process.env.REACT_APP_API_URL}/showapplication/`, { credentials: "include" })
       .then((res) => {
         return res.json();
       })
@@ -20,7 +20,7 @@ function Jobseekerapplication() {
   const [getjob, setgetjob] = useState([]);
   const fetchjob = () => {
     appdata.forEach((item) => {
-      fetch(`http://localhost:5000/searchjobbyid/${item.job}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/searchjobbyid/${item.job}`, {
         credentials: "include",
       })
         .then((res) => {

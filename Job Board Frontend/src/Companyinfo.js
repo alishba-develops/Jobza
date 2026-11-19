@@ -13,7 +13,7 @@ function Companyinfo() {
 
   const [company, setcompany] = useState({});
   const fetchapi = async () => {
-    await fetch(`http://localhost:5000/getcompanybyid/${companyid}`)
+    await fetch(`${process.env.REACT_APP_API_URL}/getcompanybyid/${companyid}`)
       .then((res) => res.json())
       .then((company) => {
         setcompany(company);
@@ -30,7 +30,7 @@ function Companyinfo() {
   const [job, setjob] = useState([]);
   const fetchjobs = async () => {
     await fetch(
-      `http://localhost:5000/getcompanyjob/${company.employerId}/${company.name}`,
+      `${process.env.REACT_APP_API_URL}/getcompanyjob/${company.employerId}/${company.name}`,
     )
       .then((res) => res.json())
       .then((job) => {
@@ -66,7 +66,7 @@ function Companyinfo() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/fetchreview/${company._id}`,
+        `${process.env.REACT_APP_API_URL}/fetchreview/${company._id}`,
       );
       const data = await response.json();
       if (response.ok) {
@@ -89,7 +89,7 @@ function Companyinfo() {
     try {
       console.log(handlereview);
       const response = await fetch(
-        `http://localhost:5000/submitreview/${company._id}`,
+        `${process.env.REACT_APP_API_URL}/submitreview/${company._id}`,
         {
           method: "POST",
 

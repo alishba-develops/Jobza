@@ -47,7 +47,7 @@ function Createjobmodal() {
   const createjob = async (e) => {
     e.preventDefault();
     try {
-      const jobdatares = await fetch("http://localhost:5000/createjob", {
+      const jobdatares = await fetch(`${process.env.REACT_APP_API_URL}/createjob`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -70,7 +70,7 @@ function Createjobmodal() {
 
   const [company, setcompany] = useState([]);
   const fetchapi = () => {
-    fetch("http://localhost:5000/getemployercompany/", {
+    fetch(`${process.env.REACT_APP_API_URL}/getemployercompany/`, {
       credentials: "include",
     })
       .then((res) => res.json())

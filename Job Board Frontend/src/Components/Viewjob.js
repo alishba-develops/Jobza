@@ -13,7 +13,7 @@ function Viewjob(props) {
   const getjobbyid = async (req, res) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/searchjobbyid/${props.id}`,
+        `${process.env.REACT_APP_API_URL}/searchjobbyid/${props.id}`,
       );
 
       const data = await res.json();
@@ -34,7 +34,7 @@ function Viewjob(props) {
   const navigate = useNavigate();
   const apply = async (jobid) => {
     try {
-      const res = await fetch(`http://localhost:5000/apply/${jobid}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/apply/${jobid}`, {
         method: "POST",
         credentials: "include",
       });
@@ -66,7 +66,7 @@ function Viewjob(props) {
   // Save job
   const savejob = async (jobid) => {
     try {
-      const res = await fetch(`http://localhost:5000/save/${jobid}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/save/${jobid}`, {
         method: "POST",
         credentials: "include",
       });

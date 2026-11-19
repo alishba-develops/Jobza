@@ -6,7 +6,7 @@ function Interview(props) {
        const [appdata, setappdata] = useState([]);
        const [data, setdata] = useState("");
         const fetchapi = () => {
-          fetch("http://localhost:5000/showrecruiterapplication/", { credentials: "include" })
+          fetch(`${process.env.REACT_APP_API_URL}/showrecruiterapplication/`, { credentials: "include" })
             .then((res) => res.json())
             .then((user) => {
                console.log("applications:", appdata);

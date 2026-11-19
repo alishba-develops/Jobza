@@ -13,7 +13,7 @@ const navigate = useNavigate();
    const logout = async()=>{
 
          try {
-              const res = await fetch(`http://localhost:5000/logout`,{
+              const res = await fetch(`${process.env.REACT_APP_API_URL}/logout`,{
                 method: "POST",
     credentials: "include"
               });

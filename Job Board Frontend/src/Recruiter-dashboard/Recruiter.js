@@ -14,7 +14,7 @@ import Setting from "../JobSeeker-dashboard/Setting";
 function Recruiter(props) {
   const [jobdata, setjobdata] = useState([]);
   const fetchapi = () => {
-    fetch("http://localhost:5000/getemployerjobdata/", {
+    fetch(`${process.env.REACT_APP_API_URL}/getemployerjobdata/`, {
       credentials: "include",
     })
       .then((res) => res.json())

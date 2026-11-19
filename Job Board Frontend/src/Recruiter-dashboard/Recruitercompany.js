@@ -6,7 +6,7 @@ function Recruitercompany() {
   const [company, setcompany] = useState([]);
   const fetchmycompany = async (req, res) => {
     try {
-      const response = await fetch("http://localhost:5000/getemployercompany", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/getemployercompany`, {
         credentials: "include",
       });
       const data = await response.json();
@@ -34,7 +34,7 @@ function Recruitercompany() {
 const deletecompany = async (id) => {
   try {
     const response = await fetch(
-      `http://localhost:5000/deletecompany/${id}`,{
+      `${process.env.REACT_APP_API_URL}/deletecompany/${id}`,{
         method:"DELETE"
       }
 

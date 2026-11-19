@@ -38,7 +38,7 @@ function Jobseekerjobs() {
 
   const [alljobs, setalljobs] = useState([]);
   const fetchalljobs = () => {
-    fetch("http://localhost:5000/getalljobs/")
+    fetch(`${process.env.REACT_APP_API_URL}/getalljobs/`)
       .then((res) => res.json())
       .then((alljobs) => {
         setalljobs(alljobs);
@@ -60,7 +60,7 @@ function Jobseekerjobs() {
   const browsejobs = async () => {
     setfilterjobs(true);
     try {
-      const response = await fetch("http://localhost:5000/searchjob", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/searchjob`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(searchjob),
@@ -80,7 +80,7 @@ function Jobseekerjobs() {
   const navigate = useNavigate();
   const apply = async (jobid) => {
     try {
-      const res = await fetch(`http://localhost:5000/apply/${jobid}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/apply/${jobid}`, {
         method: "POST",
         credentials: "include",
       });
@@ -108,7 +108,7 @@ function Jobseekerjobs() {
   // Save job
   const savejob = async (jobid) => {
     try {
-      const res = await fetch(`http://localhost:5000/save/${jobid}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/save/${jobid}`, {
         method: "POST",
         credentials: "include",
       });

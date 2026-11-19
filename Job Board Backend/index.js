@@ -12,18 +12,21 @@ app.use(express.json({limit:"10mb"}));
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      process.env.CLIENT_URL,
+    ],
     credentials: true,
   }),
 );
 
 // To listen Port
-app.listen(port, () => {
+app.listen(port,"0.0.0.0", () => {
   console.log("port is connected at:", port);
 });
 
 // DB connection
-mongoose.connect(process.env.MONGO_URI);
+  mongoose.connect(process.env.MONGO_URI)
 
 mongoose.connection.once("open", () => {
   console.log("DB connected");

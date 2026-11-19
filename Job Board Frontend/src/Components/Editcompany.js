@@ -13,7 +13,7 @@ function Editcompany() {
 
   const [company, setcompany] = useState({});
   const fetchapi = async () => {
-    await fetch(`http://localhost:5000/getcompanybyid/${companyid}`)
+    await fetch(`${process.env.REACT_APP_API_URL}/getcompanybyid/${companyid}`)
       .then((res) => res.json())
       .then((company) => {
         sethandleinput(company);
@@ -46,7 +46,7 @@ function Editcompany() {
         logo,
       };
       const jobdatares = await fetch(
-        `http://localhost:5000/editcompany/${companyid}`,
+        `${process.env.REACT_APP_API_URL}/editcompany/${companyid}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

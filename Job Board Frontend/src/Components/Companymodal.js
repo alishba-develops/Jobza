@@ -22,7 +22,7 @@ function Companymodal() {
       logo: profileimg,
     };
     try {
-      const jobdatares = await fetch("http://localhost:5000/createcompany", {
+      const jobdatares = await fetch(`${process.env.REACT_APP_API_URL}/createcompany`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -46,7 +46,7 @@ function Companymodal() {
 
   const [company, setcompany] = useState([]);
   const fetchapi = () => {
-    fetch("http://localhost:5000/getemployercompany/", {
+    fetch(`${process.env.REACT_APP_API_URL}/getemployercompany/`, {
       credentials: "include",
     })
       .then((res) => res.json())
